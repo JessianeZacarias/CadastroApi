@@ -1,5 +1,6 @@
 ﻿using CadastroPessoasApi.Data;
 using CadastroPessoasApi.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CadastroPessoasApi.Service
 {
@@ -38,6 +39,12 @@ namespace CadastroPessoasApi.Service
 
             var repository = new Repository();
             return repository.Create(pessoa);
+        }
+        public void Delete(int pessoaId)
+        {
+            var repository = new Repository();
+            repository.Delete (pessoaId);
+            
         }
     }
 

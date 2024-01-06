@@ -12,7 +12,7 @@ namespace CadastroPessoasApi.Controllers
     [ApiController]
     public class PessoasController : ControllerBase
     {
-      
+
         [HttpGet("GetAll")]
         public IEnumerable<PessoaViewModel> GetAll()
         {
@@ -49,8 +49,8 @@ namespace CadastroPessoasApi.Controllers
 
             var result = new
             {
-              Sucess = true,
-              Data = resultado,
+                Sucess = true,
+                Data = resultado,
             };
             return Ok(result);
         }
@@ -59,9 +59,8 @@ namespace CadastroPessoasApi.Controllers
         public void Delete(int pessoaId)
         {
             var service = new ServicePessoa();
-            service.Delete (pessoaId);
-        }
+            service.Delete(pessoaId);
 
-            
-    } 
+        }
+    }
 }

@@ -67,8 +67,15 @@ namespace CadastroPessoasApi.Data
             catch (Exception ex)
             {
                 throw ex;
+            }  
+        }
+        public void Delete(int pessoaId)
+        {
+            string query = "DELETE FROM PESSOAS WHERE pessoaId = @pessoaId";
+            using (SqlConnection con = new SqlConnection(conexao))
+            {
+                con.Execute(query, new { pessoaId });
             }
-
         }
     }
 }

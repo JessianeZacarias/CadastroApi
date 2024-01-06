@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
                  <td>${pessoa.cpf}</td>
                  <td>
                      <button>Editar</button>
-                     <button>Excluir</button>
+                     <button onclick ="excluir"()>Excluir</button>
                  </td>
             `;
             pessoaLista.appendChild(row);
@@ -29,4 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function abrirTelaCreate(){
     window.location.href = 'pages/create.html';
+}
+function excluir(){
+    window.location.href = ''
 }
